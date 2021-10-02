@@ -11,20 +11,7 @@ namespace MarsRoverApp
             this.Grid = grid;
             this.Position = position;
         }
-
-        // negative mod fix
-        private int mod(int x, int m)
-        {
-            return (x % m + m) % m;
-        }
-        private Direction Turn(Moves move)
-        {
-            var oldDirection = Position.Direction;
-            var newDirection = (Direction)mod((int)oldDirection + (int)move, 4);
-            return newDirection;
-        }
-
-        public void Move(Moves move)
+        private void Move(Moves move)
         {
             if (move == Moves.M)
             {
@@ -54,6 +41,17 @@ namespace MarsRoverApp
             {
                 Position.Direction = Turn(move);
             }
+        }
+        // negative mod fix
+        private int Mod(int x, int m)
+        {
+            return (x % m + m) % m;
+        }
+        private Direction Turn(Moves move)
+        {
+            var oldDirection = Position.Direction;
+            var newDirection = (Direction)Mod((int)oldDirection + (int)move, 4);
+            return newDirection;
         }
 
         public void MoveSteps(string input)

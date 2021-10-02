@@ -1,6 +1,6 @@
 ﻿namespace MarsRoverApp
 {
-    public enum Moves : int
+    public enum Moves
     {
         L = -1,
         R = 1,

@@ -27,7 +27,7 @@ namespace MarsRoverApp
             Console.ReadKey();
         }
 
-        public static string GetOutPut(List<Rover> rovers)
+        private static string GetOutPut(List<Rover> rovers)
         {
             var result = new StringBuilder();
             foreach (var rover in rovers)

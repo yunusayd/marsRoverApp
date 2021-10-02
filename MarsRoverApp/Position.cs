@@ -10,9 +10,9 @@ namespace MarsRoverApp
 
         public Position(int x, int y, Direction direction)
         {
-            this.X = x;
-            this.Y = y;
-            this.Direction = direction;
+            X = x;
+            Y = y;
+            Direction = direction;
         }
 
         public Position(string input)
@@ -31,9 +31,9 @@ namespace MarsRoverApp
             if (!Enum.TryParse(typeof(Direction), values[2], out var direction))
                 throw new ArgumentException($"Invalid Rover Direction Input:{input}");
 
-            this.X = x;
-            this.Y = y;
-            this.Direction = (Direction)direction;
+            X = x;
+            Y = y;
+            Direction = (Direction)direction;
         }
 
         public string GetInfo()

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace MarsRoverAppTests
 {
-    public class Tests
+    public class ProgramTests
     {
         [SetUp]
         public void Setup()

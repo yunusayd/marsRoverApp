@@ -1,6 +1,6 @@
 ﻿namespace MarsRoverApp
 {
-    public enum Direction : int
+    public enum Direction
     {
         N = 0,
         E = 1,
